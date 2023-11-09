@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iOS Chrome App Intents Test Page</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <li><a href="googlechromes:www.lapresse.ca">Chrome Scheme Lapresse URL</a></li>
+  <li><a href="googlechromes:">Chrome Scheme No URL Page</a></li>
+  <li><a href="googlechromes:OpenNewTabIntent">Chrome Scheme NewTab Scheme</a></li>
+</body>
+<script>
+  window.location = 'chromium-external-actions://OpenNTP';
+</script>
+
+</html>
