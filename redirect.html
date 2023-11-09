@@ -4,15 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iOS Chrome App Intents Test Page</title>
+  <title>iOS Chrome App Deeplink Redirect Test</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
-  <li><a href="googlechromes:www.lapresse.ca">Chrome Scheme Lapresse URL</a></li>
-  <li><a href="googlechromes:">Chrome Scheme No URL Page</a></li>
-  <li><a href="googlechromes:OpenNewTabIntent">Chrome Scheme NewTab Scheme</a></li>
+  <p>If your device can handle the <em>chromium-external-actions://</em> scheme, you should have been redirected.</p>
 </body>
 <script>
   window.location = 'chromium-external-actions://OpenNTP';
