@@ -1,1 +1,1 @@
-# https://Nicolas-MacBeth.github.io/
+# https://nicolas-macbeth.github.io/
