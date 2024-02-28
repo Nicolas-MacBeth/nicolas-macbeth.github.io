@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iOS Chrome App Deeplink Redirect Test</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <p>If your device can handle the <em>chromium-external-actions://</em> scheme, you should have been redirected.</p>
+</body>
+<script>
+  window.location = 'googlechromes://ChromeExternalAction/OpenNTP';
+  setTimeout(function () {
+    window.location = "index.html";
+  }, 500);
+</script>
+
+</html>
