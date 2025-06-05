@@ -9,19 +9,19 @@
 
     <h1>Shadow DOMs</h1>
     <div>
-        <div shadowrootmode="open">
+        <template shadowrootmode="open">
             <span>
-                <p>I'm in an OPEN shadow DOM, I should be VISIBLE to external JS</p>
+                <p>(Hidden text) I'm in an OPEN shadow DOM, I should be VISIBLE to external JS</p>
             </span>
-        </div>
+        </template>
     </div>
 
     <div>
-        <div shadowrootmode="closed">
+        <template shadowrootmode="closed">
             <span>
-                <p>I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS</p>
+                <p>(Hidden text) I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS</p>
             </span>
-        </div>
+        </template>
     </div>
 
     <div>
