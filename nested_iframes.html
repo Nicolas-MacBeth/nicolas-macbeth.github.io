@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="execJS()">
+
+    <h1>Shadow DOMs</h1>
+    <div>
+        <div shadowrootmode="open">
+            <span>
+                <p>I'm in an OPEN shadow DOM, I should be VISIBLE to external JS</p>
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <div shadowrootmode="closed">
+            <span>
+                <p>I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS</p>
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <div id="shadowHostOne"></div>
+    </div>
+
+    <div>
+        <div id="shadowHostTwo"></div>
+    </div>
+
+    <h1>iframe</h1>
+    <iframe src="two_sentences.html" title="iframe" height="100px" width="99%"></iframe>
+
+    <h1>Nested iframes</h1>
+    <iframe src="https://www.w3schools.com/html/html_iframe.asp" title="Nested iframes" height="700px"
+        width="99%"></iframe>
+
+</body>
+
+<script>
+    function execJS() {
+        // First, open, shadow DOM
+        const host = document.querySelector("#shadowHostOne");
+        const shadow = host.attachShadow({ mode: "open" });
+        const span = document.createElement("span");
+        const p = document.createElement("p");
+        p.textContent = "I'm in an OPEN shadow DOM, I should be VISIBLE to external JS";
+        span.appendChild(p);
+        shadow.appendChild(span);
+
+        // Second, closed, shadow DOM
+        const host2 = document.querySelector("#shadowHostTwo");
+        const shadow2 = host2.attachShadow({ mode: "closed" });
+        const span2 = document.createElement("span");
+        const p2 = document.createElement("p");
+        p2.textContent = "I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS";
+        span2.appendChild(p2);
+        shadow2.appendChild(span2);
+    }
+</script>
+
+</html>
