@@ -11,7 +11,7 @@
     <div>
         <template shadowrootmode="open">
             <span>
-                <p>(Hidden text) I'm in an OPEN shadow DOM, I should be VISIBLE to external JS</p>
+                <p>I'm in an OPEN shadow DOM, I should be VISIBLE to external JS</p>
             </span>
         </template>
     </div>
@@ -19,7 +19,7 @@
     <div>
         <template shadowrootmode="closed">
             <span>
-                <p>(Hidden text) I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS</p>
+                <p>I'm in a CLOSED shadow DOM, I should be HIDDEN from external JS, but innerText may see me</p>
             </span>
         </template>
     </div>
